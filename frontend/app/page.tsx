@@ -19,6 +19,8 @@ export default function Page() {
   const [sortKey, setSortKey] = useState<keyof Result>("score");
   const [sortAsc, setSortAsc] = useState(false);
 
+  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+
   const sortedResults = useMemo(() => {
     const sorted = [...results].sort((a, b) => {
       if (a[sortKey] < b[sortKey]) return sortAsc ? -1 : 1;
@@ -53,7 +55,7 @@ export default function Page() {
       files.forEach((file) => formData.append("files", file));
       formData.append("jd", jd);
 
-      const response = await axios.post("http://localhost:3000/analyze", formData, {
+      const response = await axios.post(`${BACKEND_URL}/analyze`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
@@ -72,7 +74,7 @@ export default function Page() {
 
   const fetchHistory = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/history");
+      const response = await axios.get(`${BACKEND_URL}/history`);
       if (response.data?.history) {
         setHistory([response.data.history]); // Wrap in array to mimic multiple sets
       } else {
