@@ -13,13 +13,13 @@ An AI-powered web application that helps recruiters and HR professionals quickly
 
 ## Tech Stack
 
-| Layer     | Technology                             |
-|-----------|----------------------------------------|
-| Frontend  | Next.js, Tailwind CSS, Axios           |    
-| Backend   | Hono (TypeScript), Node.js             |
-| AI Model  | Hugging Face Transformers              |
-| Database  | MongoDB (Cloud)                        |
-| Hosting   | Vercel (Frontend & Backend)            |
+| Layer     | Technology                               |
+|-----------|------------------------------------------|
+| Frontend  | Next.js, Tailwind CSS, Axios             |    
+| Backend   | Hono (TypeScript), Node.js               |
+| AI Model  | LangChain with Hugging Face Transformers |
+| Database  | MongoDB (Cloud)                          |
+| Hosting   | Vercel (Frontend & Backend)              |
 
 ---
 
@@ -100,5 +100,8 @@ npm run dev
 
 App available at http://localhost:3001
 
+# Author
+
+## Made by Priyanshi Lohani
 
 
