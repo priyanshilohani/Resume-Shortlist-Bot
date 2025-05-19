@@ -37,11 +37,17 @@ An AI-powered web application that helps recruiters and HR professionals quickly
 ## Project Structure
 
 /frontend → Next app for UI
+
 /backend → Hono TypeScript server
+
 ├── index.ts → API routes
+
 ├── server.ts → Entry point
+
 ├── llm.ts → AI analysis logic
+
 ├── db.ts → MongoDB setup
+
 └── .env → Environment variables
 
 
