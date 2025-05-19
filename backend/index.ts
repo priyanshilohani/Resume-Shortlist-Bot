@@ -8,7 +8,10 @@ import { connectDB } from './db';
 const app = new Hono();
 
 // Enable CORS
-app.use('*', cors());
+app.use('*', cors({
+  origin: 'https://resume-shortlist-bot.vercel.app',
+  credentials: true,
+}));
 
 app.get('/', (c) => c.text('Backend is running!'));
 
