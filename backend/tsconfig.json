@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                      // Modern JavaScript output
+    "module": "CommonJS",                      // Use latest module system
+    "moduleResolution": "Node",              // Resolve Node-style modules
+    "outDir": "dist",                        // Where compiled files go
+    "esModuleInterop": true,                 // Allows importing CommonJS modules
+    "resolveJsonModule": true,               // Support importing JSON
+    "strict": true,                          // Enable strict type checking
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "types": ["node"]                        // Include Node types
+  },
+  "include": ["**/*.ts"],                    // Include all TypeScript files
+  "exclude": ["node_modules", "dist"]        // Exclude built and dependency folders
+}
